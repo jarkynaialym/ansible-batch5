@@ -1,0 +1,36 @@
+- hosts: all 
+  tasks:  
+  - name: Install a list of packages
+    yum:
+     name:
+      - httpd
+      - git
+      - wget
+     state: latest
+
+  - name: Start apache
+    service:
+      name: httpd
+      state: started
+      enabled: yes 
+
+  - name: Stop apache
+    service:
+      name: httpd
+      state: stopped
+
+  - name: remove git
+    yum:
+     name: git
+     state: absent
+
+   
+        
+      
+
+ 
+      
+
+
+
+ 
