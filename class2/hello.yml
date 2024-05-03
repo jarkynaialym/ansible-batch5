@@ -1,0 +1,13 @@
+- hosts: all
+  tasks:
+  - name: Copy files
+    copy:
+      src: /tmp/kaizen.yml        # local machine where we're executing Ansible
+      dest: /root/hello.yml       # remote machine
+      remote_src: yes          # lets recognize  changes  if u did manually in remote machine
+ 
+
+  - name:  Create user
+    shell: mkdir -p kaizen
+         
+    
