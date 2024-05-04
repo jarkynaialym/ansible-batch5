@@ -1,0 +1,15 @@
+- hosts: all 
+  tasks:
+  # - name: Install apache
+  #   include: apache.yml
+  # - name: Install packages
+  #   include: packages.yml  
+  # - name: Add repositary php74
+  #   include: php.yml 
+  # - name: Download wordpress
+  #   include: wordpress.yml
+  - name: Install mariadb
+    include: db.yml   
+      
+    
+  
